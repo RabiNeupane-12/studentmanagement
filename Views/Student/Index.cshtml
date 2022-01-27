@@ -1,0 +1,44 @@
+@model  List<Person>
+  @{
+    ViewData["Title"]="Student Home";
+  }
+<h1>List Of Students....</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">FirstName</th>
+      <th scope="col">LastName</th>
+      <th scope="col">Class</th>
+      <th scope="col">Roll No</th>
+      <th></th>
+      <th></th>
+      
+    </tr>
+  </thead>
+  <tbody>
+   @foreach (var student in Model)
+   {
+     <tr scope="row">
+         <td>
+          <a href="/Student/detail?id=@student.Id">@student.Id</a> 
+           </td>
+         <td>@student.FirstName</td>
+         <td>@student.LastName</td>
+         <td>@student.Class</td>
+         <td>@student.Roll</td>
+         <td> 
+<a class="btn btn-primary" href="/Student/edit?id=@student.Id">Edit</a>
+
+         </td>
+<td><a class="btn btn-danger" href="/Student/delete?id=@student.Id">Delete</a>
+</td>
+         
+</tr>  
+   }
+  </tbody>
+</table>
+<span>
+<a class="btn btn-primary" href="/Student/Add">Click here to add Student</a>
+<a class="btn btn-primary" href="/Home/Index">Goto Home</a>
+</span>

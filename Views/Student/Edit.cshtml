@@ -1,0 +1,33 @@
+@{
+  ViewData["Title"] = " Students";
+}
+@model Person
+<h5>Update Student</h5>
+<form asp-controller="Student" asp-action="Edit" method="POST">
+  <div class="mb-3">
+ <input type="hidden" class="form-control" asp-for="Id">
+
+   
+  </div>
+  <div class="mb-3">
+    <label asp-for="FirstName" class="form-label">First Name</label>
+    <span class="text-danger" asp-validation-for="FirstName"></span>
+    <input type="text" class="form-control" asp-for="FirstName" placeholder="Enter First Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="LastName" class="form-label">Last Name</label>
+    <span class="text-danger" asp-validation-for="LastName"></span>
+    <input type="text" class="form-control" asp-for="LastName" placeholder="Enter Last Name">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Class" class="form-label">Class</label>
+    <span class="text-danger" asp-validation-for="Class"></span>
+    <input type="string" class="form-control" asp-for="Class" placeholder="Enter Class">
+  </div>
+  <div class="mb-3">
+    <label asp-for="Roll" class="form-label">Roll</label>
+    <span class="text-danger" asp-validation-for="Roll"></span>
+    <input type="number" class="form-control" asp-for="Roll" placeholder="Enter Roll">
+  </div>
+  <button type="submit" class="btn btn-primary">Update Student</button>
+</form>

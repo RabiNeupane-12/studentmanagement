@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+@model Person
+<h1>Are you sure you want to delete?</h1>
+
+<form asp-controller="Student" asp-action="Delete" method="post">
+  <input type="hidden" class="form-control" asp-for="Id" />
+  <button type="submit" class="btn btn-danger">Delete Anyhow</button>
+<a class="btn btn-link" href="/Student/Index">GO Back</a>
+</form>

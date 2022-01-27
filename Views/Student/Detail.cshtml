@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Details";
+}
+
+@model Person
+<h1>Descripitve Details of the Student</h1>
+<ul class="list-group">
+  <li class="list-group-item">Id:@Model.Id</li>
+  <li class="list-group-item">FirstName:@Model.FirstName</li>
+  <li class="list-group-item">LastName:@Model.LastName</li>
+  <li class="list-group-item">Class:@Model.Class</li>
+  <li class="list-group-item">Roll:@Model.Roll</li>
+</ul>
+<a class="btn btn-link" href="/Student/Index">GO Back</a>
